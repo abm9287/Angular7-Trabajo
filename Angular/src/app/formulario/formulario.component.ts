@@ -1,15 +1,51 @@
 import { Component, OnInit } from "@angular/core";
 import * as jsPDF from "jspdf";
 
+import { ServiciosService } from '../service/servicios.service';
+import { Inscripcion } from '../models/inscripcion';
+
 @Component({
   selector: "app-formulario",
   templateUrl: "./formulario.component.html",
   styleUrls: ["./formulario.component.css"]
 })
 export class FormularioComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  inscripcion: Inscripcion;
+  data: Array<Inscripcion>;
+
+  constructor(private Servicios: ServiciosService) {}
+
+  ngOnInit() {
+    this.get();
+    this.inscripcion = new Inscripcion();
+  }
+
+
+  get() {
+    this.Servicios.get('inscripcion').subscribe(
+        response => {
+            this.data = response as Array<Inscripcion>;
+        },
+        error => {
+            console.log(error);
+        }
+    );
+}
+
+post(){
+    this.Servicios.post('inscripcion',this.inscripcion).subscribe(
+      response => {
+        this.get();
+      },
+      error => {
+        console.log(error);
+      }
+      
+);
+}
+
+
 
   verPdf() {
     const doc = new jsPDF({

@@ -10,60 +10,60 @@
     </div>
     <div class="col-md-12 mt-3" align="left">
       <div>
-        Nombres: <input ng-model="name" />
-        <h5>{{ name }}</h5>
+        Nombres: <input [(ngModel)]="inscripcion.nombres" name="nombres"/>
+        <h5>{{ inscripcion.nombres }}</h5>
       </div>
       <div>
-        Apellidos: <input ng-model="apellido" />
-        <h5>{{ apellido }}</h5>
+        Apellidos: <input [(ngModel)]="inscripcion.apellidos" name="apellidos"/>
+        <h5>{{ inscripcion.apellidos }}</h5>
       </div>
       <div>
-        Fecha de Nacimiento: <input ng-model="fNaci" />
-        <h5>{{ fNaci }}</h5>
+        Fecha de Nacimiento: <input [(ngModel)]="inscripcion.fecha_nacimiento" name="fecha_nacimiento"/>
+        <h5>{{ inscripcion.fecha_nacimiento }}</h5>
       </div>
       <div>
-        Cédula: <input ng-model="ced" />
-        <h5>{{ ced }}</h5>
+        Cédula: <input [(ngModel)]="inscripcion.cedula" name="cedula"/>
+        <h5>{{ inscripcion.cedula }}</h5>
       </div>
       <div>
-        Sexo: <input ng-model="sex" />
-        <h5>{{ sex }}</h5>
+        Sexo: <input [(ngModel)]="inscripcion.sexo" name="sexo"/>
+        <h5>{{ inscripcion.sexo }}</h5>
       </div>
       <div>
-        Provincia: <input ng-model="prov" />
-        <h5>{{ prov }}</h5>
+        Provincia: <input [(ngModel)]="inscripcion.provincia" name="provincia"/>
+        <h5>{{ inscripcion.provincia }}</h5>
       </div>
       <div>
-        Cantón: <input ng-model="can" />
-        <h5>{{ can }}</h5>
+        Cantón: <input [(ngModel)]="inscripcion.canton" name="canton"/>
+        <h5>{{ inscripcion.canton }}</h5>
       </div>
       <div>
-        Parroquia: <input ng-model="parr" />
-        <h5>{{ parr }}</h5>
+        Parroquia: <input [(ngModel)]="inscripcion.parroquia" name="parroquia"/>
+        <h5>{{ inscripcion.parroquia }}</h5>
       </div>
       <div>
-        Dirección: <input ng-model="dir" />
-        <h5>{{ dir }}</h5>
+        Dirección: <input [(ngModel)]="inscripcion.direccion" name="direccion"/>
+        <h5>{{ inscripcion.direccion }}</h5>
       </div>
       <div>
-        Celular: <input type="number" ng-model="cel" />
-        <h5>{{ cel }}</h5>
+        Celular: <input type="number" [(ngModel)]="inscripcion.celular" name="celular"/>
+        <h5>{{ inscripcion.celular }}</h5>
       </div>
       <div>
-        Correo: <input ng-model="mail" />
-        <h5>{{ mail }}</h5>
+        Correo: <input [(ngModel)]="inscripcion.correo" name="correo"/>
+        <h5>{{ inscripcion.correo }}</h5>
       </div>
       <div>
-        Etnía: <input ng-model="etnia" />
-        <h5>{{ etnia }}</h5>
+        Etnía: <input [(ngModel)]="inscripcion.etnia" name="etnia"/>
+        <h5>{{ inscripcion.etnia }}</h5>
       </div>
       <div>
-        Título de Bachiller: <input ng-model="bachiller" />
-        <h5>{{ bachiller }}</h5>
+        Título de Bachiller: <input [(ngModel)]="inscripcion.titulo_bachiller" name="titulo_bachiller"/>
+        <h5>{{ inscripcion.titulo_bachiller }}</h5>
       </div>
       <div>
-        Fecha de Titulación: <input ng-model="fTitul" />
-        <h5>{{ fTitul }}</h5>
+        Fecha de Titulación: <input [(ngModel)]="inscripcion.fecha_titulacion" name="fecha_titulacion"/>
+        <h5>{{ inscripcion.fecha_titulacion }}</h5>
       </div>
       <div class="container2">
         <div class="col-md-12 mt-3" align="center">
@@ -73,7 +73,7 @@
         <div class="col-md-12 mt-3" align="center">
           <p>FORMULARIO DE INGRESO</p>
           <img src="/assets/img/anulacion.png" />
-          <button type="submit" (click)="verPdf()" class="btn btn-primary">
+          <button type="submit" (click)="verPdf()" class="btn btn-primary" (click)="post(pers)">
             Descargar PDF
           </button>
         </div>
