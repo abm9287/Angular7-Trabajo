@@ -25,3 +25,5 @@
 
 
 --	Crear y enviar datos (semillas)
+- knex seed:make "nombre_de_semilla"
+- knex seed:run
