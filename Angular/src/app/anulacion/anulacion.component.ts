@@ -1,15 +1,51 @@
 import { Component, OnInit } from "@angular/core";
 import * as jsPDF from "jspdf";
 
+import { ServiciosService } from '../service/servicios.service';
+import { Anulacion } from '../models/anulacion';
+
 @Component({
   selector: "app-anulacion",
   templateUrl: "./anulacion.component.html",
   styleUrls: ["./anulacion.component.css"]
 })
 export class AnulacionComponent implements OnInit {
-  constructor() {}
 
-  ngOnInit() {}
+  anulacion: Anulacion;
+  data: Array<Anulacion>;
+
+  constructor(private Servicios: ServiciosService) {}
+
+  ngOnInit() {
+    this.get();
+    this.anulacion = new Anulacion();
+  }
+  
+
+  get() {
+    this.Servicios.get('anulacion').subscribe(
+        response => {
+            this.data = response as Array<Anulacion>;
+        },
+        error => {
+            console.log(error);
+        }
+    );
+}
+
+post(){
+    this.Servicios.post('anulacion',this.anulacion).subscribe(
+      response => {
+        this.get();
+      },
+      error => {
+        console.log(error);
+      }
+      
+);
+}
+
+
 
   verPdf() {
     const doc = new jsPDF({

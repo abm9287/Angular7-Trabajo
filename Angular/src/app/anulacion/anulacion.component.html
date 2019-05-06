@@ -9,59 +9,59 @@
   </div>
   <div class="col-md-12 mt-3" align="left">
     <div class="name">
-      Nombres: <input ng-model="name" />
+      Nombres: <input [(ngModel)]="anulacion.nombres" name="nombres"/>
       <h5>{{ name }}</h5>
     </div>
     <div class="apellido">
-      Apellidos: <input ng-model="apellido" />
+      Apellidos: <input [(ngModel)]="anulacion.apellidos" name="apellidos"/>
       <h5>{{ apellido }}</h5>
     </div>
     <div class="fNaci">
-      Fecha de Nacimiento: <input ng-model="fNaci" />
+      Fecha de Nacimiento: <input [(ngModel)]="anulacion.fecha_nacimiento" name="fecha_nacimiento"/>
       <h5>{{ fNaci }}</h5>
     </div>
     <div class="ced">
-      Cédula: <input ng-model="ced" />
+      Cédula: <input [(ngModel)]="anulacion.cedula" name="cedula"/>
       <h5>{{ ced }}</h5>
     </div>
     <div class="sex">
-      Sexo: <input ng-model="sex" />
+      Sexo: <input [(ngModel)]="anulacion.sexo" name="sexo"/>
       <h5>{{ sex }}</h5>
     </div>
     <div class="prov">
-      Provincia: <input ng-model="prov" />
+      Provincia: <input [(ngModel)]="anulacion.provincia" name="provincia"/>
       <h5>{{ prov }}</h5>
     </div>
     <div class="can">
-      Cantón: <input ng-model="can" />
+      Cantón: <input [(ngModel)]="anulacion.canton" name="canton"/>
       <h5>{{ can }}</h5>
     </div>
     <div class="parr">
-      Parroquia: <input ng-model="parr" />
+      Parroquia: <input [(ngModel)]="anulacion.parroquia" name="parroquia"/>
       <h5>{{ parr }}</h5>
     </div>
     <div class="dir">
-      Dirección: <input ng-model="dir" />
+      Dirección: <input [(ngModel)]="anulacion.direccion" name="direccion"/>
       <h5>{{ dir }}</h5>
     </div>
     <div class="cel">
-      Celular: <input type="number" ng-model="cel" />
+      Celular: <input type="number" [(ngModel)]="anulacion.celular" name="celular"/>
       <h5>{{ cel }}</h5>
     </div>
     <div class="mail">
-      Correo: <input ng-model="mail" />
+      Correo: <input [(ngModel)]="anulacion.correo" name="correo"/>
       <h5>{{ mail }}</h5>
     </div>
     <div class="etnia">
-      Etnía: <input ng-model="etnia" />
+      Etnía: <input [(ngModel)]="anulacion.etnia" name="etnia"/>
       <h5>{{ etnia }}</h5>
     </div>
     <div class="bachiller">
-      Título de Bachiller: <input ng-model="bachiller" />
+      Título de Bachiller: <input [(ngModel)]="anulacion.titulo_bachiller" name="titulo_bachiller"/>
       <h5>{{ bachiller }}</h5>
     </div>
     <div class="fTitul">
-      Fecha de Titulación: <input ng-model="fTitul" />
+      Fecha de Titulación: <input [(ngModel)]="anulacion.fecha_titulacion" name="fecha_titulacion"/>
       <h5>{{ fTitul }}</h5>
     </div>
   </div>
@@ -70,7 +70,7 @@
       <p>Al terminar de ingresar sus datos ponga click en descargar</p>
       <p>SOLICITUD ANULACIÓN</p>
       <img src="/assets/img/anulacion.png" />
-      <button (click)="descargar()" class="btn btn-primary">
+      <button (click)="descargar()" class="btn btn-primary" (click)="post(anulacion)">
         Descargar PDF
       </button>
     </div>
