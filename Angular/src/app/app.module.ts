@@ -15,6 +15,9 @@ import { AnulacionComponent } from "./anulacion/anulacion.component";
 import { HomeComponent } from "./home/home.component";
 import { NotFoundPageComponent } from "./not-found-page/not-found-page.component";
 
+import { HttpClientModule } from '@angular/common/http';
+import { ServiciosService } from '../app/service/servicios.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +30,8 @@ import { NotFoundPageComponent } from "./not-found-page/not-found-page.component
     HomeComponent,
     NotFoundPageComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, ChartsModule, FormsModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, ChartsModule, FormsModule, HttpClientModule],
+  providers: [ServiciosService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
