@@ -1,0 +1,90 @@
+<div class="container2">
+  <form action="">
+    <div class="col-md-12 mt-3" align="center">
+      <h1><b>Formulario de Inscripción</b></h1>
+    </div>
+    <div>
+      <p>
+        Ingrese sus datos para su inscripción y posterior matricula
+      </p>
+    </div>
+    <div class="col-md-12 mt-3" align="left">
+      <div>
+        Nombres: <input ng-model="name" />
+        <h5>{{ name }}</h5>
+      </div>
+      <div>
+        Apellidos: <input ng-model="apellido" />
+        <h5>{{ apellido }}</h5>
+      </div>
+      <div>
+        Fecha de Nacimiento: <input ng-model="fNaci" />
+        <h5>{{ fNaci }}</h5>
+      </div>
+      <div>
+        Cédula: <input ng-model="ced" />
+        <h5>{{ ced }}</h5>
+      </div>
+      <div>
+        Sexo: <input ng-model="sex" />
+        <h5>{{ sex }}</h5>
+      </div>
+      <div>
+        Provincia: <input ng-model="prov" />
+        <h5>{{ prov }}</h5>
+      </div>
+      <div>
+        Cantón: <input ng-model="can" />
+        <h5>{{ can }}</h5>
+      </div>
+      <div>
+        Parroquia: <input ng-model="parr" />
+        <h5>{{ parr }}</h5>
+      </div>
+      <div>
+        Dirección: <input ng-model="dir" />
+        <h5>{{ dir }}</h5>
+      </div>
+      <div>
+        Celular: <input type="number" ng-model="cel" />
+        <h5>{{ cel }}</h5>
+      </div>
+      <div>
+        Correo: <input ng-model="mail" />
+        <h5>{{ mail }}</h5>
+      </div>
+      <div>
+        Etnía: <input ng-model="etnia" />
+        <h5>{{ etnia }}</h5>
+      </div>
+      <div>
+        Título de Bachiller: <input ng-model="bachiller" />
+        <h5>{{ bachiller }}</h5>
+      </div>
+      <div>
+        Fecha de Titulación: <input ng-model="fTitul" />
+        <h5>{{ fTitul }}</h5>
+      </div>
+      <div class="container2">
+        <div class="col-md-12 mt-3" align="center">
+          <p>Al terminar de ingresar sus datos ponga click en descargar</p>
+        </div>
+        <!--postulacion.jpg-->
+        <div class="col-md-12 mt-3" align="center">
+          <p>FORMULARIO DE INGRESO</p>
+          <img src="/assets/img/anulacion.png" />
+          <button type="submit" (click)="verPdf()" class="btn btn-primary">
+            Descargar PDF
+          </button>
+        </div>
+      </div>
+      <div class="col-md-12 mt-3" align="center">
+        <p>COMPROBANTE ACEPTACIÓN</p>
+        <img src="/assets/img/anulacion.png" />
+        <button type="submit" (click)="aceptar()" class="btn btn-primary">
+          Descargar PDF
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

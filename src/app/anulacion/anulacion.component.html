@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="col-md-12 mt-3" align="center">
+    <h1>Formulario de Anulación</h1>
+  </div>
+  <div>
+    <p>
+      Ingrese sus datos para su anulación de matricula
+    </p>
+  </div>
+  <div class="col-md-12 mt-3" align="left">
+    <div class="name">
+      Nombres: <input ng-model="name" />
+      <h5>{{ name }}</h5>
+    </div>
+    <div class="apellido">
+      Apellidos: <input ng-model="apellido" />
+      <h5>{{ apellido }}</h5>
+    </div>
+    <div class="fNaci">
+      Fecha de Nacimiento: <input ng-model="fNaci" />
+      <h5>{{ fNaci }}</h5>
+    </div>
+    <div class="ced">
+      Cédula: <input ng-model="ced" />
+      <h5>{{ ced }}</h5>
+    </div>
+    <div class="sex">
+      Sexo: <input ng-model="sex" />
+      <h5>{{ sex }}</h5>
+    </div>
+    <div class="prov">
+      Provincia: <input ng-model="prov" />
+      <h5>{{ prov }}</h5>
+    </div>
+    <div class="can">
+      Cantón: <input ng-model="can" />
+      <h5>{{ can }}</h5>
+    </div>
+    <div class="parr">
+      Parroquia: <input ng-model="parr" />
+      <h5>{{ parr }}</h5>
+    </div>
+    <div class="dir">
+      Dirección: <input ng-model="dir" />
+      <h5>{{ dir }}</h5>
+    </div>
+    <div class="cel">
+      Celular: <input type="number" ng-model="cel" />
+      <h5>{{ cel }}</h5>
+    </div>
+    <div class="mail">
+      Correo: <input ng-model="mail" />
+      <h5>{{ mail }}</h5>
+    </div>
+    <div class="etnia">
+      Etnía: <input ng-model="etnia" />
+      <h5>{{ etnia }}</h5>
+    </div>
+    <div class="bachiller">
+      Título de Bachiller: <input ng-model="bachiller" />
+      <h5>{{ bachiller }}</h5>
+    </div>
+    <div class="fTitul">
+      Fecha de Titulación: <input ng-model="fTitul" />
+      <h5>{{ fTitul }}</h5>
+    </div>
+  </div>
+  <div class="container">
+    <div class="col-md-12 mt-3" align="center">
+      <p>Al terminar de ingresar sus datos ponga click en descargar</p>
+      <p>SOLICITUD ANULACIÓN</p>
+      <img src="/assets/img/anulacion.png" />
+      <button (click)="descargar()" class="btn btn-primary">
+        Descargar PDF
+      </button>
+    </div>
+  </div>
+</div>
